@@ -27,23 +27,16 @@ Once you have Python installed, follow these steps to set up the project:
 
 Clone the repository to your local machine.
 
-bash
-
-Copy code
 
 git clone https://github.com/SivasuriyanM/Student-Performance-Prediction.git
 
 Change to the project directory.
 
-bash
-
-Copy code
 
 cd Student-Performance-Prediction
 
 Install the project dependencies using pip.
 
-Copy code
 
 pip install -r requirements.txt
 
