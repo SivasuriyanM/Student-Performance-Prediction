@@ -76,7 +76,6 @@ Open your web browser and navigate to http://localhost:8000 to access the projec
 
 To use the project, follow these steps:
 
-
 Enter the student's information in the input fields provided.
 
 Click on the "Predict" button to generate a performance prediction based on the provided information.
