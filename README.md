@@ -1,5 +1,5 @@
 # Student Performance Prediction using Django, Twilio and MongoDB
-***
+
 This project aims to predict the performance of students using machine learning techniques, with a web-based interface built using the Django framework. The project also utilizes Twilio for sending SMS notifications to parents or guardians about their child's performance.
 ***
 **Technologies Used**
@@ -64,7 +64,7 @@ Replace the placeholders with your actual Twilio account SID, auth token and pho
 
 
 **Start the Django development server.**
- 
+***
 
 Copy code
 
@@ -73,7 +73,7 @@ python manage.py runserver
 Open your web browser and navigate to http://localhost:8000 to access the project.
 
 **Usage**
-
+***
 To use the project, follow these steps:
 
 Enter the student's information in the input fields provided.
@@ -84,6 +84,7 @@ If the student's performance is below a certain threshold, an SMS notification w
 
 
 **License**
+***
 
 This project is licensed under the MIT License. You can view the license file here.
 
