@@ -4,18 +4,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
 from pymongo import MongoClient
 from django.contrib import messages
-# from .forms import UserRegistrationForm
-from django.contrib.auth import authenticate, login
-from django.http import HttpResponseRedirect
-from django.http import HttpResponse
-from django.shortcuts import redirect
-from .forms import LoginForm
-from .forms import UserForm
-from .utils import send_sms
 from twilio.rest import Client
-from django.views.decorators.csrf import csrf_exempt
-import numpy as np
-import matplotlib.pyplot as plt
 import pandas as pd
 
 client = MongoClient('mongodb+srv://admin:pswd11@cluster0.anhuqsv.mongodb.net/?retryWrites=true&w=majority')
@@ -69,7 +58,7 @@ def result(request):
     return render(request,'reg_sec.html')
 def send_sms(request):
     account_sid = 'AC4fd315edc67283bc123c346e1f22c26e'
-    auth_token = '9253213af88e35c56d0c56514224e969'
+    auth_token = '0e93de010772128c5529b67eafb8c9ea'
     client = Client(account_sid, auth_token)
 
     if request.method == 'POST':
@@ -78,11 +67,11 @@ def send_sms(request):
 
         message = client.messages.create(
             body=message,
-            from_='+918760287239',
+            from_='+15855751224',
             to=phone_number
         )
-
-        return render(request, 'predict.html')
+        data = list(mycol.find())
+        return render(request, 'predict.html', {'data': data})
 
     return render(request, 'send_sms.html')
 def predict2(request):

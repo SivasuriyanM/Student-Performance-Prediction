@@ -59,7 +59,6 @@
         <th>Unittest 3</th>
         <th>Unittest 4</th>
         <th>Result</th>
-        <th>INFORM</th>
       </tr>
       {% for item in data %}
       <tr>
@@ -75,14 +74,13 @@
         <td>{{ item.unittest3 }}</td>
         <td>{{ item.unittest4 }}</td>
         <td>{{ item.result }}</td>
-        <td><button type="submit" class="btn-home" ><a href="send_sms">Notify</a></button></td>
       </tr>
       {% endfor %}
     </table>
     <br>
     <button type="button"  class="btn-home" onclick = "window.location = 'predict2'">ADD STUDENT</button>
-    <button type="submit" class="btn-home" ><a href="../">back</a></button></td>
-      </tr>
+    <button type="submit" class="btn-home" ><a href="send_sms">Notify</a></button>
+    <button type="submit" class="btn-home" ><a href="../">back</a></button>
   </div>
   </body>
 </html>
