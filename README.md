@@ -20,7 +20,7 @@ Twilio API (for SMS notifications)
 **Installation**
 ***
 
-To run this project, you need to have Python 3installed on your system. You can download Python from the official website: https://www.python.org/downloads/
+To run this project, you need to have Python installed on your system. You can download Python from the official website: https://www.python.org/downloads/
 
 
 Once you have Python installed, follow these steps to set up the project:
