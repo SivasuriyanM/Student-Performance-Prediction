@@ -5,7 +5,6 @@ from sklearn.linear_model import LogisticRegression
 from pymongo import MongoClient
 from django.contrib import messages
 from twilio.rest import Client
-import pandas as pd
 
 client = MongoClient('mongodb+srv://admin:pswd11@cluster0.anhuqsv.mongodb.net/?retryWrites=true&w=majority')
 
@@ -79,7 +78,7 @@ def predict2(request):
 
 def result_2(request):
 
-    stud_data = pd.read_csv(r'C:\Users\msiva\spp\SPP\resource\data.csv')
+    stud_data = pd.read_csv(r'C:\Users\msiva\spp\SPP\resource\stdata.csv')
 
     a = stud_data.drop("y", axis=1)
     b = stud_data['y']
@@ -88,7 +87,6 @@ def result_2(request):
 
     model = LogisticRegression()
     model.fit(a_train, b_train)
-
 
     val1 = request.GET['n1']
     val2 = request.GET['n2']
@@ -101,30 +99,28 @@ def result_2(request):
     val9 = request.GET['n9']
     val10 = request.GET['n10']
     val11 = request.GET['n11']
-    # val12 = request.GET['n12']
-    # val13 = request.GET['n13']
-    # val13 = request.GET['n13'])
-    new_data = pd.DataFrame([[1,val4,val5,val6,val7,val8,val9,val10,val11]], columns=stud_data.columns[:-1])
+
+    new_data = pd.DataFrame([[val4,val5,val6,val7,val8,val9,val10,val11]], columns=stud_data.columns[:-1])
     prediction = model.predict(new_data)
     result4 = ''
-    if prediction == [1]:
-        result4 = "pass"
+    if prediction == [0]:
+        result4 = "GOOD"
     else:
-        result4 = "fail"
+        result4 = "Need Improvements"
 
     rec = db.student_records
     new_rec = {
         'name': val1,
         'reg_no':val2,
-        'dept': val3,
+        'department': val3,
         'gpa':val4,
-        'dca1':val5,
-        'dca2':val6,
+        'dca_1':val5,
+        'dca_2':val6,
         'model':val7,
-        'unittest1':val8,
-        'unittest2':val9,
-        'unittest3':val10,
-        'unittest4':val11,
+        'averagestudyhour':val8,
+        'learnertype':val9,
+        'arrearstatus':val10,
+        'absentcount':val11,
         'result':result4,
     }
 

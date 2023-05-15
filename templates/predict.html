@@ -47,32 +47,32 @@
     <br>
     <table>
       <tr>
-        <th> Name </th>
-        <th>Reg NO</th>
-        <th>Department</th>
+        <th> NAME </th>
+        <th>REG NO</th>
+        <th>DEPARTMENT</th>
         <th>GPA</th>
-        <th>DCA 1</th>
-        <th>DCA 2</th>
-        <th>MODEl</th>
-        <th>Unittest 1</th>
-        <th>Unittest 2</th>
-        <th>Unittest 3</th>
-        <th>Unittest 4</th>
-        <th>Result</th>
+        <th>DCA ONE</th>
+        <th>DCA TWO</th>
+        <th>MODEL</th>
+        <th>STUDY HOUR</th>
+        <th>LEARNER TYPE</th>
+        <th>HISTORY OF ARREAR</th>
+        <th>LEAVE TAKEN</th>
+        <th>RESULT</th>
       </tr>
       {% for item in data %}
       <tr>
         <td>{{ item.name }}</td>
         <td>{{ item.reg_no }}</td>
-        <td>{{ item.dept }}</td>
+        <td>{{ item.department }}</td>
         <td>{{ item.gpa }}</td>
-        <td>{{ item.dca1 }}</td>
-        <td>{{ item.dca2 }}</td>
+        <td>{{ item.dca_1 }}</td>
+        <td>{{ item.dca_1 }}</td>
         <td>{{ item.model }}</td>
-        <td>{{ item.unittest1 }}</td>
-        <td>{{ item.unittest2 }}</td>
-        <td>{{ item.unittest3 }}</td>
-        <td>{{ item.unittest4 }}</td>
+        <td>{{ item.averagestudyhour }}</td>
+        <td>{{ item.learnertype }}</td>
+        <td>{{ item.arrearstatus }}</td>
+        <td>{{ item.absentcount }}</td>
         <td>{{ item.result }}</td>
       </tr>
       {% endfor %}
