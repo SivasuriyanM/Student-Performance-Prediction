@@ -1,0 +1,73 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Result</title>
+    <style>
+        body{
+            background-image:url("{% static 'DiabetesPrediction/images/Resu.jpg'%}");
+            background-repeat:no-repeat;
+            background-attachment:fixed;
+            background-size:1370px 670px;
+        }
+        .main-result{
+            position:fixed;
+            top:233px;
+            left:310px;
+            width:550px;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+        }
+        .btn-home{
+            background-color:#2a41c7;
+            border:2px;
+            color:white;
+            padding:8px 16px;
+            cursor:pointer;
+            margin-top:15px;
+            border-radius:10px;
+            }
+      a{
+        text-decoration: none;
+      }
+      body{
+        background-image:url('/static/DiabetesPrediction/images/log.jpg');
+        background-repeat:no-repeat;
+        background-attachment:fixed;
+        background-size:1370px 670px;
+        }
+        .cont{
+            
+            width:750px;
+            border-radius:10px;
+            align-items:center;
+            padding:5%;
+            position: relative;
+            bottom: 50px;
+            position: relative;
+            
+            font-size: 40px;
+            
+            font-family: fantasy;
+            color: navy;
+        }
+        a{
+          text-decoration: none;
+          color:white;
+        }
+       
+    </style>
+</head>
+<body>
+        <div align="center" class="main-result">
+        <div class="cont">
+         <hi>Report : {{result4}}</hi>
+         <button type="submit" class="btn-home" ><a href="send_sms">Notify</a></button>
+        <button type="submit" class="btn-home" ><a href="predict">Dashboard</a></button>
+        </div>
+        
+        </div>
+</body>
+</html>

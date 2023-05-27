@@ -27,6 +27,7 @@ urlpatterns = [
     path("main/registration/logredir", views.logredir, name='logredir'),
     path("main/registration/predict2", views.predict2, name='predict2'),
     path("main/registration/result_2", views.result_2, name='result_2'),
+
     path("main/registration/send_sms", views.send_sms, name='send_sms'),
     path("registration/predict", views.predict, name='predict'),
     path('login/', LoginView.as_view(), name='login'),
@@ -35,6 +36,7 @@ urlpatterns = [
     path("login/logredir/predict", views.predict, name='predict'),
     path("login/logredir/login", LoginView.as_view(), name='login'),
     path("login/logredir/result_2", views.result_2, name='result_2'),
+    path("logredir/result_2/predict", views.result_2, name='result_2'),
     path("login/logredir/send_sms", views.send_sms, name='send_sms'),
     path("logredir/predict/",views.predict, name='predict'),
     # path('base/', views.registration, name='base'),

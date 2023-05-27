@@ -57,7 +57,7 @@ def result(request):
     return render(request,'reg_sec.html')
 def send_sms(request):
     account_sid = 'AC4fd315edc67283bc123c346e1f22c26e'
-    auth_token = '0e93de010772128c5529b67eafb8c9ea'
+    auth_token = '944c845f27c7c66a045170c780fb1811'
     client = Client(account_sid, auth_token)
 
     if request.method == 'POST':
@@ -128,4 +128,4 @@ def result_2(request):
     data = list(mycol.find())
     val = mycol.find({'name': val1})
     
-    return render(request,'predict.html', {'data': data})
+    return render(request,'result.html', {"result4":result4})
